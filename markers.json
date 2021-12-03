@@ -1,0 +1,41 @@
+[{
+    "type": "Feature",
+    "properties": {
+        "description": "<strong>First Battle of the marne</strong>",
+        "icon": "art-gallery-15"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [3.4260680649591047, 49.05469663866828]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "description": "<strong>First battle of Ypres </strong> ",
+        "icon": "bicycle-15"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [2.8856577330737445, 50.84852232256004]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "description": "<strong>Verdun</strong>",
+        "icon": "rocket-15"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [5.379820475268171, 49.156707169270874]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "description": "<strong>Somme</strong>",
+        "icon": "music-15"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [2.481326632251673, 49.80801814311632]
+    }
+}]
