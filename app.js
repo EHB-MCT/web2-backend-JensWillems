@@ -22,14 +22,26 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/markers', async (req, res) => {
-    await client.connect()
-    const db = client.db(dbConfig.db)
-    const coll = db.collection(dbConfig.coll)
-    const markers = await coll.find({}).toArray();
-    //console.log(markers)
-    res.status(200).send(markers);
-})
+    try {
+        await client.connect()
+        const db = client.db(dbConfig.db)
+        const coll = db.collection(dbConfig.coll)
+        const markers = await coll.find({}).toArray();
 
+        res.status(200).send(markers);
+    } catch (err) {
+        console.log('get', err);
+        res.status(500).send({
+            err: 'Something went wrong. Try again later',
+            value: err
+        })
+    } finally {
+        await client.close();
+    }
+
+    //console.log(markers)
+
+})
 
 app.listen(port, () => {
     console.log(`API is running at http://localhost:${port}`);
