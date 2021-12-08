@@ -33,8 +33,8 @@ app.get('/api/markers', async (req, res) => {
         const coll = db.collection(process.env.COLL)
         const markers = await coll.find({}).toArray();
 
-        //res.status(200).send(markers);
-        return res.status(200).json("Hello form markers endpoint!");
+        res.status(200).send(markers);
+        //return res.status(200).json("Hello form markers endpoint!");
     } catch (err) {
         console.log('get', err);
         res.status(500).send({
