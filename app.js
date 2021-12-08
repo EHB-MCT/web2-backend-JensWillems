@@ -4,12 +4,17 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoClient = require('mongodb').MongoClient;
 const dbConfig = require('./dbConfig.json');
-const client = new mongoClient(dbConfig.baseUrl, {
+require('dotenv').config();
+
+
+// Mongo Client
+const client = new mongoClient(process.env.FINAL_URL, {
     useNewUrlParser: true
 })
 
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 
 app.use(cors());
@@ -24,8 +29,8 @@ app.get('/', (req, res) => {
 app.get('/api/markers', async (req, res) => {
     try {
         await client.connect()
-        const db = client.db(dbConfig.db)
-        const coll = db.collection(dbConfig.coll)
+        const db = client.db(process.env.DV)
+        const coll = db.collection(process.env.COLL)
         const markers = await coll.find({}).toArray();
 
         res.status(200).send(markers);
