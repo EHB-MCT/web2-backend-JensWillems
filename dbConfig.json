@@ -1,5 +1,0 @@
-{
-    "baseUrl": "mongodb+srv://jens:jens@cluster0.dfugl.mongodb.net/theWesternFront?retryWrites=true&w=majority",
-    "db": "theWesternFront",
-    "coll": "markers"
-}
