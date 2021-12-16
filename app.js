@@ -49,7 +49,7 @@ app.get('/api/markers', async (req, res) => {
 
 })
 
-
+// The root for the register
 app.post('/api/register', async (req, res) => {
     // console.log("hello");
     try {
@@ -82,7 +82,7 @@ app.post('/api/register', async (req, res) => {
     }
 })
 
-
+// The root for the login
 app.post('/api/login', async (req, res) => {
     // console.log("hello");
     try {
