@@ -1,0 +1,33 @@
+body {
+    margin-left: 5%;
+    font-family: sans-serif;
+}
+
+.allRoutes {
+    display: flex;
+    flex-direction: column;
+}
+
+.route {
+    width: 40%;
+}
+
+.GET {
+    color: white;
+    background-color: rgb(204, 204, 61);
+}
+
+.PUT {
+    color: white;
+    background-color: blue;
+}
+
+.POST {
+    color: white;
+    background-color: violet;
+}
+
+.DELETE {
+    color: white;
+    background-color: red;
+}
