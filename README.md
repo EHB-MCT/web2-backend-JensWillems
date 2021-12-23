@@ -1,3 +1,15 @@
+Login in on website:
+mail: 
+test@test.com
+password:
+Test123
+
+Database access:
+Username:
+jens
+password:
+jens
+
 Java Script:
 Used the 3 coding along: Boardgame video's for the .env and Heroku implanted and use of the Routes :
 https://www.youtube.com/watch?v=JAFhwfyYEb4
